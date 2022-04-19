@@ -1,0 +1,31 @@
+<div class="m-2em">
+  <mat-form-field class="example-form-field">
+      <mat-label>Nome:</mat-label>
+      <input matInput type="text" [(ngModel)]="cliente.nome">
+      <button mat-button *ngIf="cliente.nome" matSuffix mat-icon-button aria-label="Clear" (click)="cliente.nome=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  
+    <mat-form-field class="example-form-field">
+      <mat-label>Cpf:</mat-label>
+      <input matInput type="text" [(ngModel)]="cliente.cpf">
+      <button mat-button *ngIf="cliente.cpf" matSuffix mat-icon-button aria-label="Clear" (click)="cliente.cpf=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    
+    <mat-form-field class="example-form-field">
+      <mat-label>Veiculo:</mat-label>
+      <input matInput type="text" [(ngModel)]="cliente.veiculo">
+      <button mat-button *ngIf="cliente.veiculo" matSuffix mat-icon-button aria-label="Clear" (click)="cliente.veiculo=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    
+    <button mat-button color="primary" (click)="cadastrarCliente()" class="buttonCadastro">
+      {{cliente?.codigo ? 'Alterar Cliente' : 'Incluir Cliente'}}
+    </button>
+    <button mat-button color="primary" [routerLink]="['/home']" class="mg-l-button">Voltar a home</button>
+</div>
+ 

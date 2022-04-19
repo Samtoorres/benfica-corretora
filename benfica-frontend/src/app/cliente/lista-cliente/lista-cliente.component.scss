@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+  }
+
+.buttonExc{
+  width: 45px;
+  height: 45px;
+}
+
+::ng-deep .buttonExc>span{
+  padding: 0 !important;
+}
